@@ -1,0 +1,124 @@
+---
+import Footer from "../components/Footer.astro";
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+
+const { pageTitle, description } = Astro.props;
+---
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <meta name="application-name" content="JulianBf" />
+    <meta name="theme-color" content="#fdebf3" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1e1e2e" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="msapplication-TileColor" content="#fdebf3" />
+
+    <meta name="description" content={description} />
+
+    <meta name="robots" content="index,follow" /><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow" /><!-- Google Specific -->
+
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="google" content="notranslate" />
+
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="canonical" href={Astro.url} />
+
+    <title>{pageTitle} - JulianBF</title>
+
+    <GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Nova+Mono&family=Bungee&display=swap" />
+  </head>
+  <body>
+    <a href="/" class="header">DJ Julian BF</a>
+    <main>
+      <slot />
+    </main>
+    <Footer />
+
+    <style lang="scss" is:global>
+      :root {
+        --backgroundColor: #0f1729;
+        --textColor: #b3c5ef;
+        --underlineColor: #d9dadb;
+      }
+
+      html {
+        background-color: var(--backgroundColor);
+        color: var(--textColor);
+      }
+
+      body {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 80ch;
+        padding: 1rem;
+        line-height: 1.5;
+        font-family: "Nova Mono", monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .header {
+        display: flex;
+        justify-content: center;
+        font-family: "Bungee", sans-serif;
+        font-size: 2.5rem;
+        text-decoration: none;
+      }
+
+      h1,
+      h2 {
+        font-weight: normal;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+
+      h2 {
+        text-decoration: underline var(--underlineColor);
+        text-decoration-thickness: 4px;
+        text-underline-offset: 6px;
+        font-size: 2.25rem;
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 1.1rem;
+        hyphens: auto;
+        line-height: 1.5;
+      }
+
+      .heroImage {
+        margin: 2rem auto;
+        display: block;
+        border-radius: 1rem;
+      }
+
+      a {
+        color: var(--textColor);
+
+        &:hover {
+          text-decoration: underline var(--underlineColor);
+        }
+
+        &:focus-visible {
+          outline: 2px double currentColor;
+          outline-offset: 1px;
+        }
+      }
+    </style>
+  </body>
+</html>

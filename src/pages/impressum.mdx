@@ -1,0 +1,25 @@
+---
+layout: ../layouts/MarkdownLayout.astro
+title: 'Impressum'
+---
+import MailToLink from '../components/MailToLink.astro';
+import { Picture } from "astro:assets";
+import myImage from '../images/impressum.jpg';
+
+<Picture class="heroImage" src={myImage} alt="" width={300} loading="eager" />
+
+
+# Impressum
+
+Hinweis zu dieser Website: Alle angebotenen Dienste sind rein privater Natur und dienen keinem gewerblichen Zweck.
+
+Angaben gemäß § 5 TMG:
+
+Frederik Bäuerle<br />
+Kornhausstr. 11<br />
+73525 Schwäbisch Gmünd
+
+## Kontakt
+
+Telefon: 0176 51682056<br />
+E-Mail: <MailToLink />
