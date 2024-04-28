@@ -1,7 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
 import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
-import { Fathom } from "astro-fathom";
 
 const { pageTitle, description } = Astro.props;
 ---
@@ -38,7 +37,6 @@ const { pageTitle, description } = Astro.props;
     <title>{pageTitle} - JulianBF</title>
 
     <GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Nova+Mono&family=Bungee&display=swap" />
-    <Fathom site="EFZGNGMV" />
   </head>
   <body>
     <a href="/" class="header">DJ Julian BF</a>
@@ -46,7 +44,7 @@ const { pageTitle, description } = Astro.props;
       <slot />
     </main>
     <Footer />
-
+    <script src="https://cdn.usefathom.com/script.js" data-site="EFZGNGMV" defer></script>
     <style lang="scss" is:global>
       :root {
         --backgroundColor: #0f1729;
