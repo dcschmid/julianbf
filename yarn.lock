@@ -1319,6 +1319,11 @@ astring@^1.8.0:
   resolved "https://registry.yarnpkg.com/astring/-/astring-1.8.6.tgz#2c9c157cf1739d67561c56ba896e6948f6b93731"
   integrity sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==
 
+astro-fathom@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/astro-fathom/-/astro-fathom-2.0.0.tgz#cb2baa229114079900dc39a340ed70c6dfcb44fe"
+  integrity sha512-Z0UXgAKrfJ43IRPhPzoXWOapVXF250AefvLaphsJViok551UpzIIDuxkUYX2CBXDtqIhH54KYPDaA9V9XyclgA==
+
 astro-google-fonts-optimizer@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/astro-google-fonts-optimizer/-/astro-google-fonts-optimizer-0.2.2.tgz#93eff2a5c17713064675f70bce4c6f2fc4c2c50f"
